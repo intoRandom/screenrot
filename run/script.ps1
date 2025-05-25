@@ -10,9 +10,9 @@ $audioPath = Join-Path $folderPath $audioFilename
 
 # Assets URLs
 # Direcciones de los archivos
-$urlScript = 'https://rot.intorandom.com/run'
-$urlImage = 'https://rot.intorandom.com/img'
-$urlAudio = 'https://rot.intorandom.com/sound'
+$urlScript = 'https://raw.githubusercontent.com/intoRandom/screenRot/refs/heads/main/run/script.ps1'
+$urlImage = 'https://raw.githubusercontent.com/intoRandom/screenRot/refs/heads/main/run/img.png'
+$urlAudio = 'https://github.com/intoRandom/screenRot/raw/refs/heads/main/run/sound.wav'
 
 # Windows task name
 # Nombre de la tarea de Windows
