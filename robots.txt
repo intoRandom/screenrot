@@ -1,0 +1,9 @@
+User-agent: *
+
+Allow: /
+
+Disallow: /img/
+Disallow: /run/
+Disallow: /sound/
+
+Sitemap: https://rot.intorandom.com/sitemap.xml
