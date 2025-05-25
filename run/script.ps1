@@ -10,7 +10,7 @@ $audioPath = Join-Path $folderPath $audioFilename
 
 # Assets URLs
 # Direcciones de los archivos
-$urlScript = 'https://raw.githubusercontent.com/intoRandom/screenRot/refs/heads/main/run/script.ps1'
+$urlScript = 'https://raw.githubusercontent.com/intoRandom/screenRot/refs/heads/main/run/run.ps1'
 $urlImage = 'https://raw.githubusercontent.com/intoRandom/screenRot/refs/heads/main/run/img.png'
 $urlAudio = 'https://github.com/intoRandom/screenRot/raw/refs/heads/main/run/sound.wav'
 
@@ -160,13 +160,16 @@ if (-not (CheckAssets)) {
 }
 else {
     GenerateWallpaper
-
     Start-Sleep -Seconds 5
+
+    $shell = New-Object -ComObject "Shell.Application"
+    $shell.minimizeall()
     PlaySound
-    
     Start-Sleep -Seconds 3
-    SetWallpaper
     
+    SetWallpaper
     Unregister-ScheduledTask -TaskName $taskName -Confirm:$false
     Remove-Item -Path $folderPath -Recurse -Force
 }
+
+exit
